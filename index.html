@@ -1,579 +1,1067 @@
 <!DOCTYPE html>
-<html lang="hi" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAYATRI ETHENICS | Style for Every You</title>
-    <!-- Tailwind CSS CDN -->
+    <title>GAYATRI ETHENICS | Royal Ethnic Wear for Women</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#FDFBF7',
-                            100: '#F9F4EB',
-                            200: '#F0E6D2',
-                            300: '#E4D3B3',
-                            600: '#8C6D48',
-                            800: '#4A3728',
-                            900: '#2C2219',
+                        cream: '#FDFBF7',
+                        ivory: '#F7F3EB',
+                        beige: '#EADFCF',
+                        gold: {
+                            light: '#E6CA65',
+                            DEFAULT: '#C5A059',
+                            dark: '#9A7833',
+                            foil: '#D4AF37'
                         },
-                        champagne: '#D4AF37',
+                        maroon: {
+                            light: '#6B1F34',
+                            DEFAULT: '#4A1525',
+                            dark: '#2E0B16'
+                        },
+                        espresso: '#2C1D18',
+                        charcoal: '#1A1A1A'
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'Playfair Display', 'serif'],
+                        heading: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+
     <style>
-        .gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+        /* Custom Luxury Styling & Borders */
+        body {
+            background-color: #FDFBF7;
+            color: #2C1D18;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
         }
-        .luxury-shadow {
-            box-shadow: 0 15px 35px -5px rgba(74, 55, 40, 0.08);
+
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif;
         }
+
+        .gold-border {
+            border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #AA771C) 1;
+        }
+
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #9A7833 0%, #C5A059 50%, #7A5B1D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #DFBA73 50%, #9A7833 100%);
+        }
+
+        /* Glassmorphism Navigation */
         .glass-nav {
             background: rgba(253, 251, 247, 0.92);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F3EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9A7833;
+        }
+
+        /* Modal & Drawer Animations */
+        .modal-fade-in {
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .drawer-slide-in {
+            animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* Hover Zoom Effect */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Paisley SVG Accent */
+        .mandala-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .mandala-divider::before, .mandala-divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            margin: 0 15px;
         }
     </style>
 </head>
-<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-200 selection:text-brand-900">
+<body class="bg-cream text-espresso selection:bg-gold selection:text-white relative">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 text-center font-medium tracking-widest uppercase">
-        ✨ Free Shipping on All Prepaid Orders Across India • Shop Exclusively on Meesho & Flipkart
+    <!-- Announcement Bar -->
+    <div class="bg-maroon text-cream text-xs py-2 px-4 text-center font-medium tracking-widest uppercase border-b border-gold/30 flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <span>✨ Free Shipping Across India &bull; Shop Directly on Meesho & Flipkart</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
     </div>
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 glass-nav border-b border-brand-200/60 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-brand-900 p-2 focus:outline-none" aria-label="Menu">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
+    <header class="sticky top-0 z-40 glass-nav border-b border-beige transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left Nav Links (Desktop) -->
+                <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest uppercase text-espresso">
+                    <a href="#home" class="hover:text-gold transition-colors duration-200">Home</a>
+                    <a href="#collections" class="hover:text-gold transition-colors duration-200">Collections</a>
+                    <a href="#bestsellers" class="hover:text-gold transition-colors duration-200">Bestsellers</a>
+                    <a href="#about" class="hover:text-gold transition-colors duration-200">Our Story</a>
+                </nav>
 
-            <a href="#" class="flex flex-col items-center lg:items-start">
-                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-brand-900">GAYATRI ETHENICS</span>
-                <span class="text-[10px] tracking-[0.25em] text-brand-600 uppercase font-medium">Style for Every You</span>
-            </a>
-
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase text-brand-800">
-                <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
-                <a href="#catalog" class="hover:text-brand-600 transition-colors">Collection</a>
-                <a href="#about" class="hover:text-brand-600 transition-colors">Our Story</a>
-                <a href="#platforms" class="hover:text-brand-600 transition-colors">Where To Buy</a>
-            </nav>
-
-            <div class="flex items-center space-x-5">
-                <button onclick="toggleSearch()" class="text-brand-900 hover:text-brand-600 transition-colors p-2" title="Search">
-                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-espresso hover:text-gold text-xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
-                <button onclick="toggleWishlist()" class="relative text-brand-900 hover:text-brand-600 transition-colors p-2" title="Wishlist">
-                    <i class="fa-regular fa-heart text-lg"></i>
-                    <span id="wishlist-count" class="absolute top-1 right-1 bg-brand-800 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-                </button>
+
+                <!-- Brand Logo & Name Center -->
+                <div class="text-center">
+                    <a href="#home" class="inline-block group">
+                        <span class="block text-2xl sm:text-3xl font-serif font-bold tracking-widest text-maroon font-cormorant uppercase">
+                            GAYATRI ETHENICS
+                        </span>
+                        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-gold uppercase font-sans font-medium -mt-1 group-hover:tracking-[0.3em] transition-all">
+                            HAUTE COUTURE INDIA
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Right Action Icons -->
+                <div class="flex items-center space-x-5">
+                    <!-- Search Trigger -->
+                    <button id="openSearchBtn" class="text-espresso hover:text-gold transition-colors p-2 text-lg" title="Search Collections">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <!-- Wishlist Drawer Trigger -->
+                    <button id="openWishlistBtn" class="text-espresso hover:text-gold transition-colors p-2 text-lg relative" title="Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span id="wishlistBadge" class="absolute -top-1 -right-1 bg-maroon text-cream text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+
+                    <!-- Direct Store Modal Trigger -->
+                    <button id="openStoreSelectBtn" class="hidden sm:flex items-center gap-2 bg-maroon text-cream text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full hover:bg-maroon-light transition-all shadow-sm border border-gold/40">
+                        <i class="fa-solid fa-store text-gold"></i>
+                        <span>Shop Platforms</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-ivory border-b border-beige px-6 py-6 space-y-4">
+            <a href="#home" class="mobile-nav-link block text-sm font-semibold tracking-wider uppercase text-espresso hover:text-gold">Home</a>
+            <a href="#collections" class="mobile-nav-link block text-sm font-semibold tracking-wider uppercase text-espresso hover:text-gold">Collections</a>
+            <a href="#bestsellers" class="mobile-nav-link block text-sm font-semibold tracking-wider uppercase text-espresso hover:text-gold">Bestsellers</a>
+            <a href="#about" class="mobile-nav-link block text-sm font-semibold tracking-wider uppercase text-espresso hover:text-gold">Our Story</a>
+            <a href="#stores" class="mobile-nav-link block text-sm font-semibold tracking-wider uppercase text-espresso hover:text-gold">Stores Hub</a>
+            <div class="pt-4 border-t border-beige flex gap-3">
+                <a href="https://www.meesho.com" target="_blank" class="flex-1 text-center bg-pink-700 text-white text-xs font-bold py-2 rounded uppercase tracking-wider">Meesho</a>
+                <a href="https://www.flipkart.com" target="_blank" class="flex-1 text-center bg-blue-600 text-white text-xs font-bold py-2 rounded uppercase tracking-wider">Flipkart</a>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-900/50 backdrop-blur-sm hidden lg:hidden transition-opacity">
-        <div class="bg-brand-50 w-4/5 max-w-sm h-full shadow-2xl p-6 flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center mb-8">
-                    <span class="font-serif text-xl font-bold text-brand-900">GAYATRI ETHENICS</span>
-                    <button onclick="toggleMobileMenu()" class="text-brand-900 p-2"><i class="fa-solid fa-xmark text-xl"></i></button>
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-ivory overflow-hidden border-b border-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-gold/10 border border-gold/30 rounded-full">
+                        <i class="fa-solid fa-crown text-gold text-xs"></i>
+                        <span class="text-xs font-semibold tracking-widest text-maroon uppercase">Festive Collection 2026</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal text-maroon leading-tight">
+                        Style for Every You, <br/>
+                        <span class="italic font-cormorant gold-text-gradient font-bold">Where Elegance Meets Your Style</span>
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-espresso/80 font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Handcrafted with pure silks, fine cottons, and intricate embroidered details. Experience regal grace in everyday comfort and festive magnificence.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#collections" class="w-full sm:w-auto px-8 py-3.5 bg-maroon text-cream font-semibold text-xs uppercase tracking-widest rounded-none shadow-lg hover:bg-espresso transition-all duration-300 border border-gold/30 text-center">
+                            Explore Royal Catalog
+                        </a>
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <a href="#collections" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-beige hover:border-gold text-xs font-bold tracking-wider text-pink-800 rounded-none transition-all shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-pink-600"></span> Meesho Store
+                            </a>
+                            <a href="#collections" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-beige hover:border-gold text-xs font-bold tracking-wider text-blue-800 rounded-none transition-all shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-blue-600"></span> Flipkart Store
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-8 border-t border-beige grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <span class="block text-xl font-serif font-bold text-maroon">100%</span>
+                            <span class="text-[10px] text-espresso/70 uppercase tracking-wider font-semibold">Pure Fabrics</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl font-serif font-bold text-maroon">XS - 3XL</span>
+                            <span class="text-[10px] text-espresso/70 uppercase tracking-wider font-semibold">Inclusive Fit</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl font-serif font-bold text-maroon">4.8 ★</span>
+                            <span class="text-[10px] text-espresso/70 uppercase tracking-wider font-semibold">Verified Ratings</span>
+                        </div>
+                    </div>
                 </div>
-                <nav class="flex flex-col space-y-4 text-base font-medium tracking-wider uppercase text-brand-800">
-                    <a href="#home" onclick="toggleMobileMenu()" class="hover:text-brand-600 py-2 border-b border-brand-200">Home</a>
-                    <a href="#catalog" onclick="toggleMobileMenu()" class="hover:text-brand-600 py-2 border-b border-brand-200">Collection</a>
-                    <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brand-600 py-2 border-b border-brand-200">Our Story</a>
-                    <a href="#platforms" onclick="toggleMobileMenu()" class="hover:text-brand-600 py-2 border-b border-brand-200">Where To Buy</a>
-                </nav>
-            </div>
-            <div class="text-xs text-brand-600 text-center py-4">
-                © 2026 Gayatri Ethenics. All Rights Reserved.
+
+                <!-- Hero Right Image Frame -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame Borders -->
+                        <div class="absolute -inset-4 border border-gold/30 rounded-t-full transform rotate-1 hidden sm:block"></div>
+                        <div class="absolute -inset-2 border-2 border-gold/50 rounded-t-full"></div>
+                        
+                        <!-- Main Hero Image Carousel Frame -->
+                        <div class="relative overflow-hidden rounded-t-full shadow-2xl border-4 border-cream bg-beige aspect-[3/4]">
+                            <img id="heroImage" 
+                                 src="gallery_image_20261010_131442_1-aur-banao-4.jpg" 
+                                 alt="GAYATRI ETHENICS Mustard Floral Silk 3-Piece Set" 
+                                 class="w-full h-full object-cover transition-all duration-700">
+                            
+                            <!-- Floating Quality Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 glass-nav p-4 border border-gold/40 shadow-xl flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-widest text-maroon">Mustard Yellow Floral Silk 3-Piece Set</p>
+                                    <p class="text-[11px] text-espresso/70">Matching Pants & Tie-Dye Dupatta</p>
+                                </div>
+                                <span class="text-sm font-serif font-bold text-gold-dark">₹ 1,899</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Search Overlay -->
-    <div id="search-modal" class="fixed inset-0 z-50 bg-brand-900/80 backdrop-blur-md hidden flex items-start justify-center pt-24 px-4">
-        <div class="bg-brand-50 w-full max-w-2xl rounded-2xl p-6 luxury-shadow relative">
-            <button onclick="toggleSearch()" class="absolute top-4 right-4 text-brand-900 text-xl"><i class="fa-solid fa-xmark"></i></button>
-            <h3 class="font-serif text-2xl font-bold text-brand-900 mb-4">Search Catalog</h3>
-            <div class="relative">
-                <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="Search kurtis, 3-piece sets, floral suits..." class="w-full bg-brand-100 border border-brand-300 rounded-xl px-4 py-3 pl-12 focus:outline-none focus:border-brand-600 text-brand-900">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-brand-600 text-lg"></i>
+    <!-- Brand Value Pillars -->
+    <section class="py-12 bg-cream border-b border-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <div class="flex flex-col items-center text-center p-4 border border-beige hover:border-gold/50 transition-all rounded bg-ivory/50">
+                    <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark mb-3">
+                        <i class="fa-solid fa-gem text-xl"></i>
+                    </div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-maroon mb-1">Authentic Craft</h4>
+                    <p class="text-[11px] text-espresso/70">Intricate Indian motifs & handwork details.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 border border-beige hover:border-gold/50 transition-all rounded bg-ivory/50">
+                    <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark mb-3">
+                        <i class="fa-solid fa-feather text-xl"></i>
+                    </div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-maroon mb-1">Pure Breathable Fabric</h4>
+                    <p class="text-[11px] text-espresso/70">Premium Cotton, Silk & Chanderi blends.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 border border-beige hover:border-gold/50 transition-all rounded bg-ivory/50">
+                    <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark mb-3">
+                        <i class="fa-solid fa-ruler-combined text-xl"></i>
+                    </div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-maroon mb-1">Flattering Fits</h4>
+                    <p class="text-[11px] text-espresso/70">Tailored precision for every Indian body shape.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 border border-beige hover:border-gold/50 transition-all rounded bg-ivory/50">
+                    <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark mb-3">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-maroon mb-1">Verified Sellers</h4>
+                    <p class="text-[11px] text-espresso/70">Buy directly on trusted Meesho & Flipkart.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Product Showcase Section -->
+    <section id="collections" class="py-16 sm:py-24 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Curated Haute Couture</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-maroon mt-2 mb-4 font-cormorant font-bold">The Royal Collection</h2>
+                <div class="mandala-divider">
+                    <i class="fa-solid fa-star text-gold text-xs"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-espresso/70 font-light">
+                    Select a category to view our handcrafted 3-piece sets, daily kurtis, and festive ensembles.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 text-xs font-semibold tracking-wider">
+                <button class="filter-btn active px-5 py-2.5 rounded-full border border-gold bg-maroon text-cream transition-all shadow-sm" data-category="all">
+                    All Royal Outfits
+                </button>
+                <button class="filter-btn px-5 py-2.5 rounded-full border border-beige bg-ivory text-espresso hover:border-gold transition-all" data-category="3piece">
+                    3-Piece Dupatta Sets
+                </button>
+                <button class="filter-btn px-5 py-2.5 rounded-full border border-beige bg-ivory text-espresso hover:border-gold transition-all" data-category="2piece">
+                    2-Piece Kurta Pant Sets
+                </button>
+                <button class="filter-btn px-5 py-2.5 rounded-full border border-beige bg-ivory text-espresso hover:border-gold transition-all" data-category="kurtis">
+                    Designer Kurtis
+                </button>
+                <button class="filter-btn px-5 py-2.5 rounded-full border border-beige bg-ivory text-espresso hover:border-gold transition-all" data-category="silk">
+                    Silk & Festive
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- JavaScript will dynamically render real product cards here -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Story Showcase -->
+    <section id="about" class="py-20 bg-ivory relative border-y border-beige overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="gallery_image_20261010_131442_1-aur-banao-4.jpg" alt="Mustard Floral Set" class="rounded shadow-md object-cover h-64 w-full">
+                            <img src="WhatsApp Image 2026-09-16 at 17.33.22.jpeg" alt="Purple Leaf Print Set" class="rounded shadow-md object-cover h-48 w-full">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="Floral Palazzo Set in a Sunlit Courtyard.png" alt="Off-White Floral Palazzo Set" class="rounded shadow-md object-cover h-48 w-full">
+                            <img src="WhatsApp_Image_2026-09-17_at_15.34.40_1-aap-mujhe-10-alag-alag-pose-me-banakar-bhejiye-3.jpg" alt="Mauve Pink Chikankari Set" class="rounded shadow-md object-cover h-64 w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Heritage & Modernity</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-maroon font-cormorant font-bold leading-tight">
+                        Crafting Timeless Elegance for the Modern Indian Woman
+                    </h2>
+                    <p class="text-xs sm:text-sm text-espresso/80 leading-relaxed font-light">
+                        At <strong class="font-semibold text-maroon">GAYATRI ETHENICS</strong>, we believe every piece of clothing should reflect the inner grace and royalty of the wearer. Inspired by centuries-old Indian weaving techniques, intricate Zari work, and refined silhouettes, our pieces seamlessly bridge traditional ethnic charm with contemporary convenience.
+                    </p>
+                    <p class="text-xs sm:text-sm text-espresso/80 leading-relaxed font-light">
+                        Whether it is a crisp cotton kurta set for afternoon work meetings, or an opulent silk 3-piece dupatta ensemble for evening wedding celebrations, we deliver designer aesthetic directly to your doorstep via trusted partners <span class="font-semibold text-pink-700">Meesho</span> and <span class="font-semibold text-blue-700">Flipkart</span>.
+                    </p>
+                    
+                    <div class="pt-4 flex items-center gap-6">
+                        <div class="border-l-2 border-gold pl-4">
+                            <p class="italic text-xs text-espresso/90 font-serif">"Elegance is not about being noticed, it's about being remembered."</p>
+                            <p class="text-[10px] font-bold uppercase text-gold-dark mt-1">&mdash; Gayatri Ethenics Design Studio</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-cream border-b border-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold">Real Customer Voices</span>
+                <h2 class="text-3xl font-serif text-maroon font-cormorant font-bold mt-1">Loved Across India</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="p-6 bg-ivory border border-beige rounded shadow-sm relative">
+                    <div class="text-gold text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-espresso/80 italic mb-4">"The 3-piece Chanderi silk dupatta set exceeded my expectations! Fabric is so soft and fitting was perfect as per the size chart. Ordered on Flipkart."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-maroon/10 flex items-center justify-center font-bold text-xs text-maroon">PS</div>
+                        <div>
+                            <p class="text-xs font-bold text-maroon">Pooja Sharma</p>
+                            <p class="text-[10px] text-espresso/60">Verified Flipkart Buyer &bull; New Delhi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 bg-ivory border border-beige rounded shadow-sm relative">
+                    <div class="text-gold text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-espresso/80 italic mb-4">"I buy Gayatri Ethenics daily wear cotton kurtis regularly on Meesho. The print does not fade even after multiple washes. Exceptional quality for this price point!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-maroon/10 flex items-center justify-center font-bold text-xs text-maroon">AP</div>
+                        <div>
+                            <p class="text-xs font-bold text-maroon">Ananya Patel</p>
+                            <p class="text-[10px] text-espresso/60">Verified Meesho Buyer &bull; Ahmedabad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 bg-ivory border border-beige rounded shadow-sm relative">
+                    <div class="text-gold text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-espresso/80 italic mb-4">"Wore the Royal Anarkali set for my cousin's sangeet. Received so many compliments! The dupatta border work looks like high-end boutique couture."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-maroon/10 flex items-center justify-center font-bold text-xs text-maroon">SR</div>
+                        <div>
+                            <p class="text-xs font-bold text-maroon">Sneha Reddy</p>
+                            <p class="text-[10px] text-espresso/60">Verified Buyer &bull; Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Locator Hub Section -->
+    <section id="stores" class="py-16 bg-maroon text-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="text-xs font-bold uppercase tracking-[0.3em] text-gold">Official Storefronts</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-cormorant font-bold mt-2 mb-6">
+                Ready to Purchase Your Favorite Ethnic Set?
+            </h2>
+            <p class="text-xs sm:text-sm text-cream/80 max-w-2xl mx-auto mb-10 font-light">
+                We distribute our verified authentic outfits exclusively through leading platforms with complete buyer protection, free delivery, and easy returns.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <!-- Meesho Store Card -->
+                <div class="bg-maroon-dark p-8 rounded border border-gold/30 hover:border-gold transition-all text-left flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold tracking-widest text-pink-400 uppercase">Official Store</span>
+                            <i class="fa-solid fa-bag-shopping text-pink-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif mb-2">Shop Gayatri Ethenics on Meesho</h3>
+                        <p class="text-xs text-cream/70 mb-6">Enjoy exclusive daily deals, cash on delivery (COD), and hassle-free 7-day return policies.</p>
+                    </div>
+                    <a href="https://www.meesho.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-pink-700 hover:bg-pink-800 text-white font-bold text-xs uppercase tracking-wider rounded transition-all">
+                        <span>Visit Meesho Store</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Flipkart Store Card -->
+                <div class="bg-maroon-dark p-8 rounded border border-gold/30 hover:border-gold transition-all text-left flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold tracking-widest text-blue-400 uppercase">Assured Store</span>
+                            <i class="fa-solid fa-box text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif mb-2">Shop Gayatri Ethenics on Flipkart</h3>
+                        <p class="text-xs text-cream/70 mb-6">Fast Flipkart Assured delivery, easy SuperCoins redemption, and verified customer reviews.</p>
+                    </div>
+                    <a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded transition-all">
+                        <span>Visit Flipkart Store</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-espresso text-cream pt-16 pb-12 border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Footer Brand Column -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="block text-2xl font-serif font-bold text-gold tracking-widest font-cormorant uppercase">
+                        GAYATRI ETHENICS
+                    </span>
+                    <p class="text-xs text-cream/70 max-w-sm leading-relaxed">
+                        “Style for Every You, Where Elegance Meets Your Style”. Premium Indian ethnic wear crafted with love and tradition.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-xs text-gold hover:bg-gold hover:text-espresso transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-xs text-gold hover:bg-gold hover:text-espresso transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-xs text-gold hover:bg-gold hover:text-espresso transition-all">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gold">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-cream/70">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home Banner</a></li>
+                        <li><a href="#collections" class="hover:text-gold transition-colors">3-Piece Dupatta Sets</a></li>
+                        <li><a href="#collections" class="hover:text-gold transition-colors">Daily Wear Kurtis</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">Our Design Philosophy</a></li>
+                        <li><a href="#stores" class="hover:text-gold transition-colors">Purchase Platforms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gold">Join Gayatri Privilege</h4>
+                    <p class="text-xs text-cream/70">Subscribe to receive first updates on new collection launches and festive sales.</p>
+                    <form id="newsletterForm" class="flex flex-col sm:flex-row gap-2 pt-2">
+                        <input type="email" required placeholder="Enter your email address..." class="px-4 py-2 bg-white/5 border border-gold/30 text-xs text-cream focus:outline-none focus:border-gold rounded flex-1">
+                        <button type="submit" class="px-5 py-2 bg-gold text-espresso font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all rounded">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Copyright & Note -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-cream/50 gap-4">
+                <p>&copy; 2026 GAYATRI ETHENICS. All Rights Reserved. Pure Indian Elegance.</p>
+                <div class="flex gap-4">
+                    <span>Redirect Partner: Meesho</span>
+                    <span>&bull;</span>
+                    <span>Redirect Partner: Flipkart</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Product Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-cream border border-gold/40 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative modal-fade-in text-espresso">
+            
+            <button id="closeQuickViewBtn" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-ivory border border-beige flex items-center justify-center text-espresso hover:text-gold transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="quickViewContent" class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-8">
+                <!-- Dynamically populated via JavaScript -->
             </div>
         </div>
     </div>
 
     <!-- Wishlist Drawer -->
-    <div id="wishlist-drawer" class="fixed inset-0 z-50 bg-brand-900/50 backdrop-blur-sm hidden flex justify-end">
-        <div class="bg-brand-50 w-full max-w-md h-full shadow-2xl p-6 flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center mb-6 pb-4 border-b border-brand-200">
-                    <h3 class="font-serif text-2xl font-bold text-brand-900">Your Wishlist</h3>
-                    <button onclick="toggleWishlist()" class="text-brand-900 text-xl"><i class="fa-solid fa-xmark"></i></button>
+    <div id="wishlistDrawer" class="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm hidden">
+        <div class="w-full max-w-md bg-cream h-full shadow-2xl border-l border-gold/30 flex flex-col drawer-slide-in">
+            
+            <div class="p-6 border-b border-beige flex items-center justify-between bg-ivory">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-maroon"></i>
+                    <h3 class="font-serif font-bold text-lg text-maroon">Your Saved Items</h3>
                 </div>
-                <div id="wishlist-items" class="space-y-4 overflow-y-auto max-h-[70vh]">
-                    <p class="text-brand-600 text-sm text-center py-8">Your wishlist is empty.</p>
-                </div>
+                <button id="closeWishlistBtn" class="text-espresso hover:text-gold p-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
             </div>
-            <button onclick="toggleWishlist()" class="w-full bg-brand-900 text-white py-3 rounded-xl font-medium tracking-wider uppercase text-sm hover:bg-brand-800 transition-colors">Continue Shopping</button>
+
+            <div id="wishlistItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+                <!-- Dynamically rendered items -->
+            </div>
+
+            <div class="p-6 border-t border-beige bg-ivory text-center">
+                <p class="text-xs text-espresso/70 mb-3">Save items to quickly locate them on Meesho & Flipkart!</p>
+                <button id="clearWishlistBtn" class="w-full py-2 bg-beige text-espresso font-semibold text-xs uppercase tracking-wider rounded hover:bg-gold/20 transition-all">
+                    Clear Wishlist
+                </button>
+            </div>
+
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative overflow-hidden bg-brand-100 py-16 lg:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
-                    <span class="inline-block bg-brand-200 text-brand-800 text-xs font-semibold tracking-[0.2em] px-4 py-1.5 rounded-full uppercase">
-                        Festive & Casual Elegance
-                    </span>
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-900 leading-tight">
-                        Style for Every You, <span class="italic font-normal text-brand-600 block mt-1">Where Elegance Meets Your Style</span>
-                    </h1>
-                    <p class="text-brand-800 text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        Discover premium women's ethnic wear featuring handcrafted kurtis, exquisite kurta pant sets, and royal 3-piece dupatta ensembles tailored for modern grace.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#catalog" class="w-full sm:w-auto bg-brand-900 text-white px-8 py-4 rounded-full font-medium tracking-wider text-sm uppercase hover:bg-brand-800 transition-all text-center luxury-shadow">
-                            Explore Collection
-                        </a>
-                        <a href="#platforms" class="w-full sm:w-auto border border-brand-800 text-brand-900 px-8 py-4 rounded-full font-medium tracking-wider text-sm uppercase hover:bg-brand-200/50 transition-all text-center">
-                            Shop on Meesho & Flipkart
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-6 relative">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <div class="absolute -inset-4 bg-brand-300/40 rounded-3xl transform rotate-3"></div>
-                        <img src="gallery_image_20261010_131442_1-aur-banao-4.jpg" alt="Mustard Yellow Floral Silk 3-Piece Set" class="relative rounded-2xl luxury-shadow w-full h-[500px] object-cover object-top">
-                    </div>
-                </div>
+    <!-- Search Modal -->
+    <div id="searchModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-start justify-center pt-20 px-4 hidden">
+        <div class="bg-cream border border-gold/40 rounded-lg max-w-2xl w-full p-6 shadow-2xl relative modal-fade-in">
+            <button id="closeSearchBtn" class="absolute top-4 right-4 text-espresso hover:text-gold p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="font-serif text-xl font-bold text-maroon mb-4">Search Gayatri Collection</h3>
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="Type fabric, category, e.g. Silk, Anarkali, 3-Piece..." class="w-full px-4 py-3 bg-ivory border border-gold/40 rounded text-sm text-espresso focus:outline-none focus:border-gold">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-3.5 text-gold"></i>
+            </div>
+            <div id="searchResults" class="mt-4 max-h-60 overflow-y-auto space-y-2">
+                <!-- Search results injected here -->
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Brand Highlights -->
-    <section class="py-12 bg-white border-y border-brand-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="w-12 h-12 bg-brand-100 text-brand-800 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                        <i class="fa-solid fa-feather"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">Pure Premium Fabrics</h3>
-                    <p class="text-brand-600 text-sm">Crafted with breathable cotton, opulent silk blends, and rich textures for all-day comfort.</p>
-                </div>
-                <div class="p-6">
-                    <div class="w-12 h-12 bg-brand-100 text-brand-800 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">Exquisite Craftsmanship</h3>
-                    <p class="text-brand-600 text-sm">Detailed floral prints, elegant necklines, and intricate embroidery designed to stand out.</p>
-                </div>
-                <div class="p-6">
-                    <div class="w-12 h-12 bg-brand-100 text-brand-800 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-900 mb-2">Trusted Retail Platforms</h3>
-                    <p class="text-brand-600 text-sm">Easily order securely through verified listings on India's top marketplaces: Meesho & Flipkart.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Catalog Section -->
-    <section id="catalog" class="py-20 bg-brand-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-semibold tracking-[0.25em] text-brand-600 uppercase">Curated Collection</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-2 mb-4">Our Signature Ethnic Wear</h2>
-                <p class="text-brand-600 text-sm sm:text-base font-light">Explore our latest 2-piece sets, 3-piece dupatta kurtas, and elegant short kurtis. Click any item to view details or buy directly.</p>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterCatalog('all')" class="catalog-filter-btn active bg-brand-900 text-white px-6 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all">All Designs</button>
-                <button onclick="filterCatalog('3-piece')" class="catalog-filter-btn bg-brand-200 text-brand-900 px-6 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all hover:bg-brand-300">3-Piece Sets</button>
-                <button onclick="filterCatalog('co-ord')" class="catalog-filter-btn bg-brand-200 text-brand-900 px-6 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all hover:bg-brand-300">Co-ord & Palazzo</button>
-                <button onclick="filterCatalog('short-kurti')" class="catalog-filter-btn bg-brand-200 text-brand-900 px-6 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all hover:bg-brand-300">Short Kurtis</button>
-            </div>
-
-            <!-- Product Grid -->
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="3-piece">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="gallery_image_20261010_131442_1-aur-banao-4.jpg" alt="Mustard Yellow Floral Silk 3-Piece Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(1, 'Mustard Yellow Floral Silk 3-Piece Set', '₹599', 'gallery_image_20261010_131442_1-aur-banao-4.jpg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">3-Piece Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Mustard Yellow Floral Silk 3-Piece Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Luxurious floral print with matching dupatta & trousers.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹599</span>
-                                <span class="text-xs text-brand-600 line-through">₹1,999</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="3-piece">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="WhatsApp Image 2026-09-16 at 17.33.22.jpeg" alt="Royal Deep Purple Leaf Print Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(2, 'Royal Deep Purple Leaf Print Set', '₹499', 'WhatsApp Image 2026-09-16 at 17.33.22.jpeg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">Kurta Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Royal Deep Purple Leaf Print Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Vibrant botanical motifs on deep purple fabric.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹499</span>
-                                <span class="text-xs text-brand-600 line-through">₹1,499</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="co-ord">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="https://gayatrihouseofstyle-creator.github.io/gayatri-ethenics/Floral%20Palazzo%20Set%20in%20a%20Sunlit%20Courtyard%20%281%29.png" alt="Off-White & Pink Floral Palazzo Co-ord Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(3, 'Off-White & Pink Floral Palazzo Co-ord Set', '₹799', 'Floral Palazzo Set in a Sunlit Courtyard (1).png')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">Palazzo Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Off-White & Pink Floral Palazzo Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Graceful palazzo pants paired with a soft floral tunic.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹799</span>
-                                <span class="text-xs text-brand-600 line-through">₹2,199</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="short-kurti">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="gallery_image_20261008_225343-isme-alg-alg-pose-banao.jpg" alt="Cream Minimal Floral Print Short Kurti Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(4, 'Cream Minimal Floral Print Short Kurti Set', '₹799', 'gallery_image_20261008_225343-isme-alg-alg-pose-banao.jpg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">Short Kurti Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Cream Minimal Floral Print Short Kurti Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Subtle ethnic elegance for casual everyday wear.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹799</span>
-                                <span class="text-xs text-brand-600 line-through">₹2,199</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="3-piece">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="gallery_image_20261008_215901_1-isme-baano-pose-alg-alg-4.jpg" alt="Pastel Yellow Floral Jaipuri Print Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(5, 'Pastel Yellow Floral Jaipuri Print Set', '₹799', 'gallery_image_20261008_215901_1-isme-baano-pose-alg-alg-4.jpg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">Jaipuri Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Pastel Yellow Floral Jaipuri Print Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Traditional Jaipuri aesthetics in soothing pastel tones.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹799</span>
-                                <span class="text-xs text-brand-600 line-through">₹2,199</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="short-kurti">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="WhatsApp_Image_2026-10-07_at_20.34.54-aur-koi-nature-ka-background-akdam-realstic-2_1-15-pose-alg-al-12.jpg" alt="Earthy Botanical Linen Short Kurti Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(6, 'Earthy Botanical Linen Short Kurti Set', '₹799', 'WhatsApp_Image_2026-10-07_at_20.34.54-aur-koi-nature-ka-background-akdam-realstic-2_1-15-pose-alg-al-12.jpg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">Botanical Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Earthy Botanical Linen Short Kurti Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Breathable linen fabric with organic floral prints.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹799</span>
-                                <span class="text-xs text-brand-600 line-through">₹2,199</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden luxury-shadow border border-brand-200/50 flex flex-col justify-between group" data-category="3-piece">
-                    <div class="relative overflow-hidden bg-brand-100 aspect-[3/4]">
-                        <img src="WhatsApp_Image_2026-09-17_at_15.34.40_1-aap-mujhe-10-alag-alag-pose-me-banakar-bhejiye-3.jpg" alt="Mauve Pink Printed Dupatta 3-Piece Set" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <button onclick="toggleWishlistProduct(7, 'Mauve Pink Printed Dupatta 3-Piece Set', '₹499', 'WhatsApp_Image_2026-09-17_at_15.34.40_1-aap-mujhe-10-alag-alag-pose-me-banakar-bhejiye-3.jpg')" class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm w-9 h-9 rounded-full flex items-center justify-center text-brand-900 hover:bg-brand-900 hover:text-white transition-colors">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                        <span class="absolute bottom-4 left-4 bg-brand-900/90 text-white text-[10px] tracking-widest uppercase px-3 py-1 rounded-full font-medium">3-Piece Set</span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <h3 class="font-serif text-lg font-bold text-brand-900 mb-1">Mauve Pink Printed Dupatta 3-Piece Set</h3>
-                            <p class="text-brand-600 text-xs mb-3">Sophisticated mauve pink kurti paired with ethnic dupatta.</p>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="text-lg font-bold text-brand-900">₹499</span>
-                                <span class="text-xs text-brand-600 line-through">₹1,599</span>
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="bg-pink-700 hover:bg-pink-800 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Meesho</a>
-                                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase transition-colors">Flipkart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white border-t border-brand-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="Floral Palazzo Set in a Sunlit Courtyard.png" alt="About Gayatri Ethenics" class="rounded-2xl luxury-shadow h-72 w-full object-cover">
-                        <img src="WhatsApp Image 2026-09-16 at 17.33.22.jpeg" alt="Brand Craftsmanship" class="rounded-2xl luxury-shadow h-72 w-full object-cover mt-8">
-                    </div>
-                </div>
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-xs font-semibold tracking-[0.25em] text-brand-600 uppercase">The Brand Story</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 leading-tight">Crafting Timeless Indian Elegance for Every Woman</h2>
-                    <p class="text-brand-800 text-base font-light leading-relaxed">
-                        At <strong class="font-semibold text-brand-900">GAYATRI ETHENICS</strong>, we believe traditional Indian ethnic wear should effortlessly blend contemporary comfort with royal heritage. From everyday breathable kurtis to gorgeous festive 3-piece sets, every piece is designed keeping the modern Indian woman in mind.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-4">
-                        <div class="border-l-2 border-brand-600 pl-4">
-                            <h4 class="font-serif text-xl font-bold text-brand-900 mb-1">Direct Value</h4>
-                            <p class="text-brand-600 text-xs">Affordable pricing without compromising on superior fabric and tailoring quality.</p>
-                        </div>
-                        <div class="border-l-2 border-brand-600 pl-4">
-                            <h4 class="font-serif text-xl font-bold text-brand-900 mb-1">Pan-India Reach</h4>
-                            <p class="text-brand-600 text-xs">Seamlessly accessible and delivered across India through Meesho and Flipkart.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platforms Banner Section -->
-    <section id="platforms" class="py-20 bg-brand-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-xs font-semibold tracking-[0.25em] text-brand-600 uppercase">Official Storefronts</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-2 mb-6">Shop GAYATRI ETHENICS on Your Favorite Platform</h2>
-            <p class="text-brand-800 text-base font-light max-w-2xl mx-auto mb-10">
-                We retail exclusively through trusted e-commerce platforms to guarantee safe payments, buyer protection, and fast doorstep delivery.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="w-full sm:w-auto bg-pink-700 hover:bg-pink-800 text-white px-10 py-4 rounded-full font-semibold tracking-wider text-sm uppercase luxury-shadow transition-transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-bag-shopping text-lg"></i> Visit Meesho Store
-                </a>
-                <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold tracking-wider text-sm uppercase luxury-shadow transition-transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-cart-shopping text-lg"></i> Visit Flipkart Store
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-brand-900 text-brand-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-brand-800 pb-12">
-                <div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white block mb-2">GAYATRI ETHENICS</span>
-                    <p class="text-xs tracking-[0.2em] text-brand-300 uppercase mb-4">Style for Every You, Where Elegance Meets Your Style</p>
-                    <p class="text-brand-300 text-sm font-light">Your trusted destination for elegant women's kurtis, 2-piece sets, and luxury 3-piece ethnic wear.</p>
-                </div>
-                <div>
-                    <h4 class="font-serif text-lg font-bold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-brand-300">
-                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#catalog" class="hover:text-white transition-colors">Collection Catalog</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">Our Story</a></li>
-                        <li><a href="#platforms" class="hover:text-white transition-colors">Meesho & Flipkart Stores</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-serif text-lg font-bold text-white mb-4">Customer Assurance</h4>
-                    <p class="text-brand-300 text-sm font-light mb-4">All orders, payments, and shipping are securely handled via Meesho and Flipkart official platforms.</p>
-                    <div class="flex space-x-4 text-xl">
-                        <a href="https://www.meesho.com/GAYATRIETHENICS?_ms=3.0.1" target="_blank" class="text-pink-400 hover:text-pink-300 transition-colors"><i class="fa-solid fa-store"></i></a>
-                        <a href="https://dl.flipkart.com/s/nPEa!RNNNN" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-brand-400">
-                <p>© 2026 GAYATRI ETHENICS. All Rights Reserved.</p>
-                <p class="mt-2 sm:mt-0">Designed with Luxury Indian Ethnic Aesthetic</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript functionality -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        function toggleSearch() {
-            const modal = document.getElementById('search-modal');
-            modal.classList.toggle('hidden');
-            if(!modal.classList.contains('hidden')) {
-                document.getElementById('search-input').focus();
+        // Real Catalog Data Array matching uploaded photos
+        const products = [
+            {
+                id: 1,
+                title: "Mustard Yellow Floral Silk 3-Piece Set",
+                category: "3piece",
+                fabric: "Silk Blend & Tie-Dye Dupatta",
+                price: 1899,
+                originalPrice: 3799,
+                rating: 4.9,
+                reviews: 142,
+                badge: "Hero Bestseller",
+                image: "gallery_image_20261010_131442_1-aur-banao-4.jpg",
+                description: "Vibrant mustard yellow kurti with rich floral prints, pink pants, and a beautiful contrast tie-dye dupatta with lace borders.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: true
+            },
+            {
+                id: 2,
+                title: "Royal Deep Purple Leaf Print Straight Suit",
+                category: "3piece",
+                fabric: "Soft Cotton Silk Blend",
+                price: 1699,
+                originalPrice: 3399,
+                rating: 4.8,
+                reviews: 118,
+                badge: "Royal Edit",
+                image: "WhatsApp Image 2026-09-16 at 17.33.22.jpeg",
+                description: "Elegant deep purple v-neck kurta with artistic leaf patterns, matching solid trousers, and a lightweight chiffon dupatta.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: true
+            },
+            {
+                id: 3,
+                title: "Off-White & Pink Floral Palazzo Co-ord Set",
+                category: "2piece",
+                fabric: "100% Pure Breathable Cotton",
+                price: 1299,
+                originalPrice: 2599,
+                rating: 4.9,
+                reviews: 96,
+                badge: "Summer Chic",
+                image: "Floral Palazzo Set in a Sunlit Courtyard.png",
+                description: "Fresh off-white short kurta featuring vibrant pink and teal botanical prints paired with matching flared palazzo pants.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: false
+            },
+            {
+                id: 4,
+                title: "Cream Minimal Floral Print Short Kurti Set",
+                category: "2piece",
+                fabric: "Premium Slub Linen Cotton",
+                price: 1199,
+                originalPrice: 2399,
+                rating: 4.7,
+                reviews: 87,
+                badge: "Daily Essential",
+                image: "gallery_image_20261008_225343-isme-alg-alg-pose-banao.jpg",
+                description: "Graceful ivory tunic kurta with delicate floral stem prints along the hem paired with comfortable wide-leg pants.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: false
+            },
+            {
+                id: 5,
+                title: "Pastel Yellow Jaipuri Print Kurta Pant Set",
+                category: "kurtis",
+                fabric: "Mulmul Fine Cotton",
+                price: 999,
+                originalPrice: 1999,
+                rating: 4.8,
+                reviews: 104,
+                badge: "Jaipuri Edit",
+                image: "gallery_image_20261008_215901_1-isme-baano-pose-alg-alg-4.jpg",
+                description: "Bright pastel yellow collar-neck kurta with floral block printing, perfect for casual outings and workday elegance.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: false
+            },
+            {
+                id: 6,
+                title: "Earthy Botanical Linen Short Kurti Set",
+                category: "2piece",
+                fabric: "Natural Linen Blend",
+                price: 1349,
+                originalPrice: 2699,
+                rating: 4.9,
+                reviews: 73,
+                badge: "Eco Comfort",
+                image: "WhatsApp_Image_2026-10-07_at_20.34.54-aur-koi-nature-ka-background-akdam-realstic-2_1-15-pose-alg-al-12.jpg",
+                description: "Light beige natural linen tunic with dark floral border motifs paired with matching loose palazzo trousers.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: false
+            },
+            {
+                id: 7,
+                title: "Mauve Pink Printed & Dupatta 3-Piece Suit",
+                category: "3piece",
+                fabric: "Chanderi Cotton & Ikat Dupatta",
+                price: 1799,
+                originalPrice: 3599,
+                rating: 5.0,
+                reviews: 132,
+                badge: "Festive Favorite",
+                image: "WhatsApp_Image_2026-09-17_at_15.34.40_1-aap-mujhe-10-alag-alag-pose-me-banakar-bhejiye-3.jpg",
+                description: "Sophisticated dusty pink embroidered straight suit accompanied by crisp white pants and an Ikat printed dupatta.",
+                meeshoLink: "https://www.meesho.com",
+                flipkartLink: "https://www.flipkart.com",
+                isSilk: true
             }
+        ];
+
+        // State Management
+        let wishlist = JSON.parse(localStorage.getItem('gayatri_wishlist') || '[]');
+
+        // DOM Elements
+        const productGrid = document.getElementById('productGrid');
+        const wishlistBadge = document.getElementById('wishlistBadge');
+        const wishlistDrawer = document.getElementById('wishlistDrawer');
+        const wishlistItemsContainer = document.getElementById('wishlistItemsContainer');
+        const quickViewModal = document.getElementById('quickViewModal');
+        const quickViewContent = document.getElementById('quickViewContent');
+        const searchModal = document.getElementById('searchModal');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        function renderProducts(filterCategory = 'all') {
+            productGrid.innerHTML = '';
+
+            const filtered = products.filter(p => {
+                if (filterCategory === 'all') return true;
+                if (filterCategory === 'silk') return p.isSilk;
+                return p.category === filterCategory;
+            });
+
+            filtered.forEach(product => {
+                const isSaved = wishlist.includes(product.id);
+                const card = document.createElement('div');
+                card.className = "bg-ivory border border-beige hover:border-gold/60 rounded transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group relative";
+
+                card.innerHTML = `
+                    <div class="relative img-zoom-container rounded-t aspect-[3/4] bg-beige">
+                        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">
+                        
+                        <!-- Top Badges -->
+                        <div class="absolute top-3 left-3 flex flex-col gap-1">
+                            <span class="px-2.5 py-1 bg-maroon text-cream text-[10px] font-bold uppercase tracking-wider rounded-none shadow">
+                                ${product.badge}
+                            </span>
+                        </div>
+
+                        <!-- Wishlist Toggle Button -->
+                        <button onclick="toggleWishlist(${product.id})" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-cream/90 backdrop-blur text-espresso hover:text-maroon flex items-center justify-center transition-all shadow">
+                            <i class="${isSaved ? 'fa-solid text-maroon' : 'fa-regular'} fa-heart"></i>
+                        </button>
+
+                        <!-- Quick View Overlay Button -->
+                        <button onclick="openQuickView(${product.id})" class="absolute bottom-3 left-3 right-3 bg-cream/90 backdrop-blur text-espresso text-xs font-semibold uppercase tracking-wider py-2.5 opacity-0 group-hover:opacity-100 transition-all duration-300 border border-gold/30 text-center hover:bg-maroon hover:text-cream">
+                            <i class="fa-regular fa-eye mr-1"></i> Quick Inspect
+                        </button>
+                    </div>
+
+                    <!-- Details Box -->
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] text-espresso/60 mb-1">
+                                <span class="uppercase tracking-wider font-medium">${product.fabric}</span>
+                                <span class="text-gold-dark font-bold">★ ${product.rating}</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-base text-maroon mb-2 group-hover:text-gold-dark transition-colors">
+                                ${product.title}
+                            </h3>
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-base font-serif font-bold text-espresso">₹${product.price.toLocaleString('en-IN')}</span>
+                                <span class="text-xs text-espresso/40 line-through">₹${product.originalPrice.toLocaleString('en-IN')}</span>
+                                <span class="text-[10px] text-emerald-700 font-bold uppercase">(50% OFF)</span>
+                            </div>
+                        </div>
+
+                        <!-- Direct Store Redirect Buttons -->
+                        <div class="pt-3 border-t border-beige/80 space-y-2">
+                            <p class="text-[10px] text-center uppercase tracking-widest text-espresso/50 font-semibold mb-1">Buy Direct On:</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="${product.meeshoLink}" target="_blank" class="flex items-center justify-center gap-1 py-1.5 px-2 bg-pink-700 hover:bg-pink-800 text-white rounded text-[11px] font-bold uppercase tracking-wider transition-all">
+                                    <span>Meesho</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </a>
+                                <a href="${product.flipkartLink}" target="_blank" class="flex items-center justify-center gap-1 py-1.5 px-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-[11px] font-bold uppercase tracking-wider transition-all">
+                                    <span>Flipkart</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
         }
 
-        let wishlist = [];
-        function toggleWishlistProduct(id, name, price, image) {
-            const index = wishlist.findIndex(item => item.id === id);
-            if(index > -1) {
-                wishlist.splice(index, 1);
+        // Filter Tabs Event Listeners
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-maroon', 'text-cream', 'border-gold');
+                    b.classList.add('bg-ivory', 'text-espresso', 'border-beige');
+                });
+                e.target.classList.remove('bg-ivory', 'text-espresso', 'border-beige');
+                e.target.classList.add('bg-maroon', 'text-cream', 'border-gold');
+
+                renderProducts(e.target.dataset.category);
+            });
+        });
+
+        function updateWishlistBadge() {
+            if (wishlist.length > 0) {
+                wishlistBadge.textContent = wishlist.length;
+                wishlistBadge.classList.remove('hidden');
             } else {
-                wishlist.push({id, name, price, image});
+                wishlistBadge.classList.add('hidden');
             }
-            updateWishlistUI();
+            localStorage.setItem('gayatri_wishlist', JSON.stringify(wishlist));
         }
 
-        function updateWishlistUI() {
-            document.getElementById('wishlist-count').innerText = wishlist.length;
-            const container = document.getElementById('wishlist-items');
-            if(wishlist.length === 0) {
-                container.innerHTML = '<p class="text-brand-600 text-sm text-center py-8">Your wishlist is empty.</p>';
+        function toggleWishlist(productId) {
+            if (wishlist.includes(productId)) {
+                wishlist = wishlist.filter(id => id !== productId);
+            } else {
+                wishlist.push(productId);
+            }
+            updateWishlistBadge();
+            renderProducts();
+            if (!wishlistDrawer.classList.contains('hidden')) {
+                renderWishlistDrawer();
+            }
+        }
+
+        function renderWishlistDrawer() {
+            wishlistItemsContainer.innerHTML = '';
+            if (wishlist.length === 0) {
+                wishlistItemsContainer.innerHTML = `
+                    <div class="text-center py-12 text-espresso/60">
+                        <i class="fa-regular fa-heart text-4xl mb-3 text-gold"></i>
+                        <p class="text-xs font-semibold">Your Wishlist is currently empty.</p>
+                    </div>
+                `;
                 return;
             }
-            container.innerHTML = wishlist.map(item => `
-                <div class="flex items-center justify-between bg-brand-100 p-3 rounded-xl">
-                    <div class="flex items-center space-x-3">
-                        <img src="${item.image}" alt="${item.name}" class="w-12 h-14 object-cover rounded-lg">
-                        <div>
-                            <h4 class="font-serif text-sm font-bold text-brand-900">${item.name}</h4>
-                            <p class="text-xs font-semibold text-brand-800">${item.price}</p>
+
+            const savedProducts = products.filter(p => wishlist.includes(p.id));
+            savedProducts.forEach(p => {
+                const item = document.createElement('div');
+                item.className = "flex gap-3 p-3 bg-ivory border border-beige rounded relative";
+                item.innerHTML = `
+                    <img src="${p.image}" class="w-16 h-20 object-cover rounded">
+                    <div class="flex-1">
+                        <h4 class="font-serif font-bold text-xs text-maroon">${p.title}</h4>
+                        <p class="text-[11px] font-bold text-espresso mt-1">₹${p.price.toLocaleString('en-IN')}</p>
+                        <div class="flex gap-2 mt-2">
+                            <a href="${p.meeshoLink}" target="_blank" class="px-2 py-1 bg-pink-700 text-white text-[9px] font-bold rounded">Meesho</a>
+                            <a href="${p.flipkartLink}" target="_blank" class="px-2 py-1 bg-blue-600 text-white text-[9px] font-bold rounded">Flipkart</a>
                         </div>
                     </div>
-                    <button onclick="toggleWishlistProduct(${item.id})" class="text-red-600 text-sm"><i class="fa-solid fa-trash"></i></button>
+                    <button onclick="toggleWishlist(${p.id})" class="text-espresso/40 hover:text-maroon text-xs">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                `;
+                wishlistItemsContainer.appendChild(item);
+            });
+        }
+
+        function openQuickView(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            quickViewContent.innerHTML = `
+                <div class="aspect-[3/4] rounded bg-beige overflow-hidden">
+                    <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">
                 </div>
-            `).join('');
+                <div class="flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gold-dark bg-gold/10 px-2 py-1 rounded">
+                            ${product.badge}
+                        </span>
+                        <h2 class="font-serif font-bold text-2xl text-maroon mt-2 mb-1">${product.title}</h2>
+                        <div class="flex items-center gap-2 text-xs text-espresso/70 mb-3">
+                            <span class="text-gold font-bold">★ ${product.rating}</span>
+                            <span>(${product.reviews} customer reviews)</span>
+                        </div>
+
+                        <div class="flex items-baseline gap-3 mb-4">
+                            <span class="text-2xl font-serif font-bold text-maroon">₹${product.price.toLocaleString('en-IN')}</span>
+                            <span class="text-sm text-espresso/40 line-through">₹${product.originalPrice.toLocaleString('en-IN')}</span>
+                        </div>
+
+                        <p class="text-xs text-espresso/80 leading-relaxed mb-4">${product.description}</p>
+
+                        <div class="space-y-2 py-3 border-y border-beige text-xs">
+                            <p><strong>Fabric Specification:</strong> ${product.fabric}</p>
+                            <p><strong>Sizes Available:</strong> XS, S, M, L, XL, XXL, 3XL</p>
+                            <p><strong>Care Instructions:</strong> Dry Clean Recommended for silk blends; mild handwash for cotton kurtis.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 pt-2">
+                        <p class="text-xs font-bold uppercase tracking-wider text-maroon text-center">Select Platform to Purchase</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="${product.meeshoLink}" target="_blank" class="flex items-center justify-center gap-2 py-3 bg-pink-700 hover:bg-pink-800 text-white font-bold text-xs uppercase tracking-wider rounded shadow transition-all">
+                                <i class="fa-solid fa-cart-shopping"></i> Meesho Store
+                            </a>
+                            <a href="${product.flipkartLink}" target="_blank" class="flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded shadow transition-all">
+                                <i class="fa-solid fa-cart-shopping"></i> Flipkart Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            quickViewModal.classList.remove('hidden');
         }
 
-        function toggleWishlist() {
-            const drawer = document.getElementById('wishlist-drawer');
-            drawer.classList.toggle('hidden');
-        }
+        // Open/Close Handlers
+        document.getElementById('openWishlistBtn').addEventListener('click', () => {
+            renderWishlistDrawer();
+            wishlistDrawer.classList.remove('hidden');
+        });
 
-        function filterCatalog(category) {
-            document.querySelectorAll('.catalog-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-900', 'text-white');
-                btn.classList.add('bg-brand-200', 'text-brand-900');
+        document.getElementById('closeWishlistBtn').addEventListener('click', () => {
+            wishlistDrawer.classList.add('hidden');
+        });
+
+        document.getElementById('clearWishlistBtn').addEventListener('click', () => {
+            wishlist = [];
+            updateWishlistBadge();
+            renderWishlistDrawer();
+            renderProducts();
+        });
+
+        document.getElementById('closeQuickViewBtn').addEventListener('click', () => {
+            quickViewModal.classList.add('hidden');
+        });
+
+        // Search Handlers
+        document.getElementById('openSearchBtn').addEventListener('click', () => {
+            searchModal.classList.remove('hidden');
+            searchInput.focus();
+        });
+
+        document.getElementById('closeSearchBtn').addEventListener('click', () => {
+            searchModal.classList.add('hidden');
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+            if (!query) return;
+
+            const matches = products.filter(p => 
+                p.title.toLowerCase().includes(query) || 
+                p.fabric.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query)
+            );
+
+            if (matches.length === 0) {
+                searchResults.innerHTML = `<p class="text-xs text-espresso/60 py-2">No matching outfits found.</p>`;
+                return;
+            }
+
+            matches.forEach(m => {
+                const row = document.createElement('div');
+                row.className = "flex items-center justify-between p-2 hover:bg-beige/40 rounded cursor-pointer";
+                row.onclick = () => {
+                    searchModal.classList.add('hidden');
+                    openQuickView(m.id);
+                };
+                row.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${m.image}" class="w-10 h-12 object-cover rounded">
+                        <div>
+                            <p class="text-xs font-bold text-maroon">${m.title}</p>
+                            <p class="text-[10px] text-espresso/60">${m.fabric}</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-serif font-bold">₹${m.price}</span>
+                `;
+                searchResults.appendChild(row);
             });
-            event.target.classList.remove('bg-brand-200', 'text-brand-900');
-            event.target.classList.add('bg-brand-900', 'text-white');
+        });
 
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if(category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
 
-        function filterProducts() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                const title = card.querySelector('h3').innerText.toLowerCase();
-                if(title.includes(query)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
             });
-        }
+        });
+
+        document.getElementById('openStoreSelectBtn').addEventListener('click', () => {
+            document.getElementById('stores').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Newsletter Toast Form
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to Gayatri Privilege! You will receive our latest festive catalogs via email.');
+            e.target.reset();
+        });
+
+        // Initial Load Configuration
+        window.onload = function() {
+            updateWishlistBadge();
+            renderProducts();
+        };
     </script>
 </body>
 </html>
